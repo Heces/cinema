@@ -105,7 +105,11 @@ $hoSo = $cauTruyVan->fetch(PDO::FETCH_ASSOC) ?: [];
                             <ion-icon name="ticket-outline"></ion-icon>
                             <span>Vé của tôi</span>
                         </a>
-                    
+                    <div class="dropdown-divider"></div>
+              <a href="admin_movies.php" class="dropdown-link">
+                <ion-icon name="film-outline"></ion-icon>
+                <span>Quản lý phim</span>
+              </a>
                         <div class="dropdown-divider"></div>
                         <form method="POST" style="margin: 0;">
                             <input type="hidden" name="action" value="logout">
@@ -279,3 +283,4 @@ $hoSo = $cauTruyVan->fetch(PDO::FETCH_ASSOC) ?: [];
 </body>
 
 </html>
+
