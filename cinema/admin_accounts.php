@@ -8,7 +8,7 @@ $conn = $db->getConnection();
 $error_message = '';
 $success_message = '';
 
-// Xử lý các action
+// Xử lý các actin
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
     
@@ -143,4 +143,5 @@ try {
 </div>
 
 <?php require_once 'includes/admin_footer.php'; ?>
+
 
