@@ -143,7 +143,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                                     <div class="input-group">
                                         <ion-icon name="call-outline" class="input-icon"></ion-icon>
                                         <input type="tel" id="phone" name="phone" class="form-input" 
-                                               placeholder="Nhập số điện thoại" required>
+                                               placeholder="Nhập số điện thoại" pattern="[0-9]+" inputmode="numeric"
+                                               oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
                                     </div>
                                 </div>
                             </div>
@@ -252,3 +253,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 </body>
 
 </html>
+
