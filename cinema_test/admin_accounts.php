@@ -376,10 +376,12 @@ if (isset($_GET['edit']) && is_numeric($_GET['edit'])) {
                            value="<?php echo htmlspecialchars($editAccount['Email']); ?>" required>
                 </div>
                 
-                <div class="form-group">
+              <div class="form-group">
                     <label for="sdt" class="form-label">Số điện thoại</label>
                     <input type="tel" id="sdt" name="sdt" class="form-input" 
-                           value="<?php echo htmlspecialchars($editAccount['SDT'] ?? ''); ?>">
+                           value="<?php echo htmlspecialchars($editAccount['SDT'] ?? ''); ?>"
+                           pattern="[0-9]+" inputmode="numeric"
+                           oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 </div>
                 
                 <div class="form-group">
@@ -438,4 +440,5 @@ if (isset($_GET['edit']) && is_numeric($_GET['edit'])) {
 </script>
 
 <?php require_once 'includes/admin_footer.php'; ?>
+
 
