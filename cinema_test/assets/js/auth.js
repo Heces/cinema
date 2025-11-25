@@ -1,9 +1,8 @@
-/**
- * Authentication JavaScript
- * Xử lý các tương tác trên trang đăng nhập và đăng ký
- */
 
-// Toggle password visibility
+//Xử lý các tương tác trên trang đăng nhập và đăng ký
+
+
+// hiện mật khẩu
 function togglePassword(inputId) {
     const input = document.getElementById(inputId);
     const icon = document.getElementById(inputId + '-icon');
@@ -17,7 +16,7 @@ function togglePassword(inputId) {
     }
 }
 
-// Form validation
+// xác thực
 function validateForm(formId) {
     const form = document.getElementById(formId);
     const inputs = form.querySelectorAll('input[required], select[required]');
@@ -32,7 +31,7 @@ function validateForm(formId) {
         }
     });
     
-    // Validate email
+    // email
     const emailInput = form.querySelector('input[type="email"]');
     if (emailInput && emailInput.value) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -42,7 +41,7 @@ function validateForm(formId) {
         }
     }
     
-    // Validate phone
+    // dienthoai
     const phoneInput = form.querySelector('input[type="tel"]');
     if (phoneInput && phoneInput.value) {
         const phoneRegex = /^[0-9]{10,11}$/;
@@ -52,7 +51,7 @@ function validateForm(formId) {
         }
     }
     
-    // Validate password confirmation
+    // matkhau
     const passwordInput = form.querySelector('input[name="password"]');
     const confirmPasswordInput = form.querySelector('input[name="confirm_password"]');
     if (passwordInput && confirmPasswordInput) {
@@ -62,15 +61,11 @@ function validateForm(formId) {
         }
     }
     
-    // Validate password strength
-    if (passwordInput && passwordInput.value) {
-
-    }
     
     return isValid;
 }
 
-// Show field error
+// error
 function showFieldError(input, message) {
     clearFieldError(input);
     
@@ -82,7 +77,6 @@ function showFieldError(input, message) {
     input.parentNode.appendChild(errorDiv);
 }
 
-// Clear field error
 function clearFieldError(input) {
     input.classList.remove('error');
     const existingError = input.parentNode.querySelector('.field-error');
@@ -91,74 +85,10 @@ function clearFieldError(input) {
     }
 }
 
-// // Handle form submission
-// function handleFormSubmit(formId) {
-//     const form = document.getElementById(formId);
-    
-//     form.addEventListener('submit', function(e) {
-//         e.preventDefault();
-        
-//         // Clear previous errors
-//         const existingErrors = form.querySelectorAll('.field-error');
-//         existingErrors.forEach(error => error.remove());
-        
-//         const inputs = form.querySelectorAll('.form-input');
-//         inputs.forEach(input => input.classList.remove('error'));
-        
-//         // Validate form
-//         if (!validateForm(formId)) {
-//             return;
-//         }
-        
-//         // Show loading state
-//         const submitBtn = form.querySelector('.auth-btn');
-//         const originalText = submitBtn.innerHTML;
-//         submitBtn.classList.add('loading');
-//         submitBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Đang xử lý...</span>';
-//         submitBtn.disabled = true;
-        
-//         // Submit form
-//         const formData = new FormData(form);
-        
-//         fetch(form.action || window.location.href, {
-//             method: 'POST',
-//             body: formData
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.success) {
-//                 // Show success message
-//                 showAlert('success', data.message);
-                
-//                 // Redirect after delay
-//                 setTimeout(() => {
-//                     if (formId === 'registerForm') {
-//                         window.location.href = 'login.php';
-//                     } else {
-//                         window.location.href = 'index.php';
-//                     }
-//                 }, 1500);
-//             } else {
-//                 // Show error message
-//                 showAlert('error', data.message);
-//             }
-//         })
-//         .catch(error => {
-//             console.error('Error:', error);
-//             showAlert('error', 'Có lỗi xảy ra. Vui lòng thử lại.');
-//         })
-//         .finally(() => {
-//             // Reset button state
-//             submitBtn.classList.remove('loading');
-//             submitBtn.innerHTML = originalText;
-//             submitBtn.disabled = false;
-//         });
-//     });
-// }
 
-// Show alert message
+// thongbao
 function showAlert(type, message) {
-    // Remove existing alerts
+
     const existingAlerts = document.querySelectorAll('.alert');
     existingAlerts.forEach(alert => alert.remove());
     
@@ -174,7 +104,6 @@ function showAlert(type, message) {
     const form = document.querySelector('.auth-form');
     form.parentNode.insertBefore(alertDiv, form);
     
-    // Auto remove after 5 seconds
     setTimeout(() => {
         if (alertDiv.parentNode) {
             alertDiv.remove();
@@ -182,7 +111,7 @@ function showAlert(type, message) {
     }, 5000);
 }
 
-// Real-time validation
+// thoigianthuc
 function setupRealTimeValidation(formId) {
     const form = document.getElementById(formId);
     const inputs = form.querySelectorAll('input, select');
@@ -204,9 +133,8 @@ function setupRealTimeValidation(formId) {
     });
 }
 
-// Initialize when DOM is loaded
+// DOM 
 document.addEventListener('DOMContentLoaded', function() {
-    // Setup form validation
     const loginForm = document.querySelector('form[action=""]');
     const registerForm = document.getElementById('registerForm');
     
@@ -220,13 +148,13 @@ document.addEventListener('DOMContentLoaded', function() {
         setupRealTimeValidation('registerForm');
     }
     
-    // Handle success message from URL
+ 
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === '1') {
         showAlert('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
     }
     
-    // Add CSS for field errors
+    // css error
     const style = document.createElement('style');
     style.textContent = `
         .form-input.error {
@@ -251,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 });
 
-// Password strength indicator
+
 function checkPasswordStrength(password) {
     let strength = 0;
     const checks = {
@@ -271,13 +199,12 @@ function checkPasswordStrength(password) {
     };
 }
 
-// Add password strength indicator to register form
+// do manh mat khau
 document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.querySelector('input[name="password"]');
     if (passwordInput) {
         passwordInput.addEventListener('input', function() {
             const strength = checkPasswordStrength(this.value);
-            // You can add visual strength indicator here
         });
     }
 });

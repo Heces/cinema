@@ -269,7 +269,7 @@ $topRatedMovies = $movie->getAllMovies(6);
 
           <p class="section-subtitle">Phim sắp chiếu</p>
 
-          <h2 class="h2 section-title">Sắp ra mắt</h2>
+          <h2 class="h2 section-title">Phim sắp chiếu</h2>
 
           <ul class="movies-list">
             <?php if (!empty($moviesComingSoon) && !isset($moviesComingSoon['error'])): ?>

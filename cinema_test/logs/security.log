@@ -259,3 +259,9 @@
 [2025-11-25 04:09:41] IP: ::1 | User: 6 | Event: USER_LOGIN | Details: User: tung | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
 [2025-11-25 04:19:41] IP: ::1 | User: 6 | Event: USER_LOGOUT | Details: User: 6 | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
 [2025-11-25 04:25:39] IP: ::1 | User: 7 | Event: USER_LOGIN | Details: User: test | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[2025-11-25 10:31:50] IP: ::1 | User: guest | Event: USER_REGISTERED | Details: User: a, Email: abcd@gmail.com | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[2025-11-25 10:31:53] IP: ::1 | User: 8 | Event: USER_LOGIN | Details: User: a | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[2025-11-25 10:34:27] IP: ::1 | User: 8 | Event: USER_LOGOUT | Details: User: 8 | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[2025-11-25 10:34:34] IP: ::1 | User: 1 | Event: USER_LOGIN | Details: User: admin | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[2025-11-25 11:01:33] IP: ::1 | User: 1 | Event: MOVIE_UPDATED | Details: Movie ID: 48 | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+[2025-11-25 11:20:01] IP: ::1 | User: 1 | Event: USER_LOGOUT | Details: User: 1 | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36

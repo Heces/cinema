@@ -1,7 +1,6 @@
 <?php
 /**
- * Cấu hình kết nối database
- * Sử dụng PDO để kết nối an toàn với MySQL
+ *database
  */
 
 class Database {
@@ -72,12 +71,12 @@ function checkDatabaseConnection() {
 }
 
 
-// Cấu hình error reporting (chỉ trong development)
-if (defined('DEVELOPMENT') && DEVELOPMENT) {
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-} else {
-    error_reporting(0);
-    ini_set('display_errors', 0);
-}
+// // Cấu hình error reporting (chỉ trong development)
+// if (defined('DEVELOPMENT') && DEVELOPMENT) {
+//     error_reporting(E_ALL);
+//     ini_set('display_errors', 1);
+// } else {
+//     error_reporting(0);
+//     ini_set('display_errors', 0);
+// }
 ?>

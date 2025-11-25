@@ -36,12 +36,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <div class="admin-container">
         <!-- Sidebar -->
         <aside class="admin-sidebar">
-            <div class="admin-sidebar-header">
+            <div>
                 <a href="index.php" class="logo">
                     <img src="./assets/images/project-logo.png" alt="Logo">
-                </a>
-                <a href="index.php" class="admin-sidebar-header-title">
-                    <h2>Cinema Admin</h2> 
                 </a>
                 
             </div>

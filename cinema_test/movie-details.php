@@ -4,6 +4,9 @@ require_once 'includes/movie.php';
 require_once 'includes/showtime.php';
 require_once 'config/database.php';
 
+$db = new Database();
+$conn = $db->getConnection();
+
 $auth = new Auth();
 $movie = new Movie();
 $showtime = new Showtime();

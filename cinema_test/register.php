@@ -76,22 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
                 </div>
-
-                <ul class="navbar-list">
-                    <li><a href="./index.php" class="navbar-link">Trang chủ</a></li>
-                    <li><a href="#" class="navbar-link">Phim</a></li>
-                    <li><a href="#" class="navbar-link">TV Show</a></li>
-                    <li><a href="#" class="navbar-link">Web Series</a></li>
-                    <li><a href="#" class="navbar-link">Giá vé</a></li>
-                </ul>
-
-                <ul class="navbar-social-list">
-                    <li><a href="#" class="navbar-social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                    <li><a href="#" class="navbar-social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="#" class="navbar-social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
-                    <li><a href="#" class="navbar-social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                    <li><a href="#" class="navbar-social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
-                </ul>
             </nav>
         </div>
     </header>
